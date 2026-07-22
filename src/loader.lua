@@ -5,8 +5,6 @@ local GAMES = {
     },
 }
 
-local UIS       = game:GetService("UserInputService")
-local IS_MOBILE = UIS.TouchEnabled and not UIS.MouseEnabled
 local UNIVERSE  = game.GameId
 local PLACE     = game.PlaceId
 
@@ -16,11 +14,6 @@ if not gameDef then
         "[ARTHEIRS-FARM] Game belum supported.\nUniverseId: %s · PlaceId: %s\nJoin Discord untuk request game baru.",
         tostring(UNIVERSE), tostring(PLACE)
     ))
-    return
-end
-
-if not IS_MOBILE then
-    warn("[ARTHEIRS-FARM] Script ini khusus Mobile. Executor PC belum didukung.")
     return
 end
 
